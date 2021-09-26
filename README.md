@@ -1,4 +1,4 @@
-A project inspired by an article on material.io about animations.
+A project inspired by an [article on material.io](https://material.io/design/motion/speed.html) about animations.
 
 ToDo
 1. Finish navbar
