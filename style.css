@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #f8edeb;
+}
+
+.options {
+  display: flex;
+  list-style: none;
+}
+
+.option {
+    position: relative;
+    padding: 10px 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.option-title {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.option .dropdown {
+    pointer-events: none;
+    opacity: 0;
+    top: 60px;
+
+    transition: opacity 0.2s, top 0.2s;
+    transition-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+
+    position: absolute;
+    left: 5px;
+    list-style: none;
+    background-color: #ffd7ba;
+    padding: 5px;
+    min-width: calc(100% - 10px);
+    box-sizing: border-box;
+}
+
+.option:hover .dropdown {
+    top: 30px;
+    opacity: 1;
+    z-index: 10;
+    pointer-events: all;
+}
+
+@media only screen and (max-width: 680px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 20px;
+        height: unset;
+    }
+
+    .options-section:first-child {
+        margin-top: 30px;
+    }
+
+    .options {
+        flex-direction: column;
+    }
+
+    .option {
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .option .dropdown {
+        position: static;
+        opacity: 1;
+    }
+
+    .logo {
+        order: -1;
+    }
+}
